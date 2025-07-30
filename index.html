@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTIInfotronic - قطع غيار لابتوب و أجهزة كمبيوتر</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/966501234567?text=مرحباً%20بكم%20في%20CTIInfotronic%20كيف%20يمكنني%20مساعدتكم؟" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/50" alt="CTIInfotronic Logo" class="h-10">
+                    <span class="mr-3 text-xl font-semibold">CTIInfotronic</span>
+                </div>
+                <div class="hidden md:flex space-x-4 space-x-reverse">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">الرئيسية</a>
+                    <a href="#products" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">المنتجات</a>
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">من نحن</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700">اتصل بنا</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 pb-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">الرئيسية</a>
+                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">المنتجات</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">من نحن</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">قطع غيار لابتوب موثوقة - توصيل سريع</h1>
+            <p class="text-xl mb-8">نوفر أفضل قطع الغيار وأجهزة اللابتوب بجودة عالية وأسعار تنافسية</p>
+            <a href="#order" class="bg-white text-blue-800 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
+                اطلب الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/500x300" alt="CTIInfotronic Store" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:mr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">مرحباً بكم في CTIInfotronic</h2>
+                    <p class="text-gray-600 mb-4">
+                        نحن متخصصون في توفير قطع غيار اللابتوب الأصلية والبديلة بجودة عالية. نقدم لكم خدمة موثوقة وسريعة لتلبية جميع احتياجات صيانة وتجهيز أجهزة اللابتوب.
+                    </p>
+                    <p class="text-gray-600">
+                        فريقنا من الفنيين ذوي الخبرة جاهز لمساعدتك في اختيار القطع المناسبة لجهازك وتقديم الاستشارات الفنية اللازمة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">منتجاتنا المميزة</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://via.placeholder.com/300x200" alt="Laptop" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">لابتوب ديل XPS 15</h3>
+                        <p class="text-gray-600 mb-4">شاشة 15.6 بوصة، معالج i7، 16GB RAM، 512GB SSD</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">3,499 $</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                                اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://via.placeholder.com/300x200" alt="SSD" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">SSD سامسونج 1TB</h3>
+                        <p class="text-gray-600 mb-4">سعة 1 تيرابايت، سرعة قراءة 3500MB/s، ضمان 5 سنوات</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">499 $</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                                اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://via.placeholder.com/300x200" alt="Battery" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">بطارية HP 4400mAh</h3>
+                        <p class="text-gray-600 mb-4">بطارية أصلية لسلسلة HP Pavilion، ضمان سنة</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">249 $</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                                اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#products" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">
+                    عرض جميع المنتجات <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Page -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">جميع المنتجات</h2>
+            
+            <!-- Product Categories -->
+            <div class="flex flex-wrap justify-center mb-12">
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300" data-category="all">
+                    الكل
+                </button>
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition duration-300" data-category="laptops">
+                    أجهزة لابتوب
+                </button>
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition duration-300" data-category="keyboards">
+                    كيبوردات
+                </button>
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition duration-300" data-category="batteries">
+                    بطاريات
+                </button>
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition duration-300" data-category="ssds">
+                    أقراص SSD
+                </button>
+                <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition duration-300" data-category="chargers">
+                    شواحن
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">من نحن</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:ml-10">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">قصتنا</h3>
+                    <p class="text-gray-600 mb-6">
+                        تأسست CTIInfotronic في عام 2015 بهدف توفير قطع غيار اللابتوب بجودة عالية وأسعار مناسبة. بدأنا كمتجر صغير ونتوسع الآن لنكون أحد الموردين الموثوقين في المنطقة.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">رؤيتنا</h3>
+                    <p class="text-gray-600">
+                        نهدف إلى أن نكون الخيار الأول لكل من يحتاج إلى قطع غيار أو أجهزة لابتوب، من خلال تقديم منتجات عالية الجودة وخدمة عملاء مميزة وسرعة في التوصيل.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://via.placeholder.com/500x300" alt="About CTIInfotronic" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+            
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">جودة مضمونة</h3>
+                    <p class="text-gray-600">جميع منتجاتنا أصلية أو بديلة بجودة عالية مع ضمان مناسب</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-truck text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">توصيل سريع</h3>
+                    <p class="text-gray-600">نضمن وصول طلبك في أسرع وقت ممكن داخل المدينة</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-headset text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">دعم فني</h3>
+                    <p class="text-gray-600">فريق دعم فني متاح لمساعدتك في اختيار القطع المناسبة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">اتصل بنا</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">معلومات التواصل</h3>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-3 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">الهاتف</h4>
+                                <p class="text-gray-600">+966 50 123 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-3 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">البريد الإلكتروني</h4>
+                                <p class="text-gray-600">info@ctiinfotronic.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="text-blue-600 mr-3 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">العنوان</h4>
+                                <p class="text-gray-600">شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mr-3 mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">ساعات العمل</h4>
+                                <p class="text-gray-600">من الأحد إلى الخميس: 9 صباحاً - 6 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <a href="https://wa.me/966501234567?text=مرحباً%20بكم%20في%20CTIInfotronic%20كيف%20يمكنني%20مساعدتكم؟" 
+                           class="bg-green-500 text-white px-6 py-3 rounded-lg flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-whatsapp text-xl ml-2"></i>
+                            تواصل معنا عبر واتساب
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:mr-10">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">أرسل لنا رسالة</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">الاسم</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">البريد الإلكتروني</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">الرسالة</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                إرسال الرسالة
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Now -->
+    <section id="order" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">اطلب الآن</h2>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="max-w-lg mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="px-6 py-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">املأ النموذج لطلب المنتج</h3>
+                    
+                    <form id="order-form">
+                        <div class="mb-4">
+                            <label for="order-name" class="block text-gray-700 mb-2">الاسم الكامل</label>
+                            <input type="text" id="order-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="order-product" class="block text-gray-700 mb-2">المنتج المطلوب</label>
+                            <input type="text" id="order-product" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="order-phone" class="block text-gray-700 mb-2">رقم الواتساب</label>
+                            <input type="tel" id="order-phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="order-notes" class="block text-gray-700 mb-2">ملاحظات (اختياري)</label>
+                            <textarea id="order-notes" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            إرسال الطلب
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="bg-gray-100 px-6 py-4 text-center">
+                    <p class="text-gray-600">أو يمكنك التواصل معنا مباشرة عبر:</p>
+                    <a href="https://wa.me/966501234567?text=أريد%20طلب%20منتج%20من%20CTIInfotronic" 
+                       class="inline-block mt-2 bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                        <i class="fab fa-whatsapp ml-2"></i> واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">CTIInfotronic</h3>
+                    <p class="text-gray-400">متخصصون في توفير قطع غيار اللابتوب وأجهزة الكمبيوتر بجودة عالية وأسعار تنافسية.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">الرئيسية</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">المنتجات</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">من نحن</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">تواصل معنا</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +966 50 123 4567
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> info@ctiinfotronic.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> الرياض، السعودية
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">تابعنا</h3>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 CTIInfotronic. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Product Categories Filter
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const productsGrid = document.getElementById('products-grid');
+        
+        // Sample products data
+        const products = [
+            {
+                id: 1,
+                name: 'لابتوب ديل XPS 15',
+                category: 'laptops',
+                price: '3,499 $',
+                description: 'شاشة 15.6 بوصة، معالج i7، 16GB RAM، 512GB SSD',
+                image: 'https://via.placeholder.com/300x200'
+            },
+            {
+                id: 2,
+                name: 'SSD سامسونج 1TB',
+                category: 'ssds',
+                price: '499 $',
+                description: 'سعة 1 تيرابايت، سرعة قراءة 3500MB/s، ضمان 5 سنوات',
+                image: 'https://via.placeholder.com/300x200'
+            },
+            {
+                id: 3,
+                name: 'بطارية HP 4400mAh',
+                category: 'batteries',
+                price: '249 $',
+                description: 'بطارية أصلية لسلسلة HP Pavilion، ضمان سنة',
+                image: 'https://via.placeholder.com/300x200'
+            },
+            {
+                id: 4,
+                name: 'كيبورد ماك بوك برو',
+                category: 'keyboards',
+                price: '399 $',
+                description: 'كيبورد أصلية لماك بوك برو، إضاءة خلفية',
+                image: 'https://via.placeholder.com/300x200'
+            },
+            {
+                id: 5,
+                name: 'شاحن لينوفو 65W',
+                category: 'chargers',
+                price: '149 $',
+                description: 'شاحن أصلي للينوفو، 65 واط، مع كابل USB-C',
+                image: 'https://via.placeholder.com/300x200'
+            },
+            {
+                id: 6,
+                name: 'لابتوب لينوفو Legion 5',
+                category: 'laptops',
+                price: '4,199 $',
+                description: 'شاشة 15.6 بوصة 144Hz، معالج Ryzen 7، 16GB RAM، 1TB SSD',
+                image: 'https://via.placeholder.com/300x200'
+            }
+        ];
+
+        // Display all products initially
+        displayProducts(products);
+
+        // Category filter functionality
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                });
+                this.classList.add('bg-blue-600', 'text-white');
+                this.classList.remove('bg-gray-200', 'text-gray-800');
+                
+                // Filter products
+                const category = this.getAttribute('data-category');
+                if (category === 'all') {
+                    displayProducts(products);
+                } else {
+                    const filteredProducts = products.filter(product => product.category === category);
+                    displayProducts(filteredProducts);
+                }
+            });
+        });
+
+        // Function to display products
+        function displayProducts(productsToDisplay) {
+            productsGrid.innerHTML = '';
+            
+            if (productsToDisplay.length === 0) {
+                productsGrid.innerHTML = '<p class="col-span-3 text-center text-gray-600 py-8">لا توجد منتجات في هذه الفئة</p>';
+                return;
+            }
+            
+            productsToDisplay.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-gray-600 mb-4">${product.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">${product.price}</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                                اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لتواصلكم معنا! سنرد عليكم في أقرب وقت ممكن.');
+            this.reset();
+        });
+
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('order-name').value;
+            const product = document.getElementById('order-product').value;
+            const phone = document.getElementById('order-phone').value;
+            
+            if (name && product && phone) {
+                alert(`شكراً لطلبكم ${name}! سنتواصل معكم على الرقم ${phone} لتأكيد طلب ${product}.`);
+                this.reset();
+            } else {
+                alert('الرجاء ملء جميع الحقول المطلوبة.');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
